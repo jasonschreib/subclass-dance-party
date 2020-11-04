@@ -1,32 +1,97 @@
-// Creates and returns a new dancer object that can step
-var makeDancer = function(top, left, timeBetweenSteps) {
+// // Creates and returns a new dancer object that can step
+// var makeDancer = function(top, left, timeBetweenSteps) {
 
-  var dancer = {};
+//   var dancer = {};
 
-  // use jQuery to create an HTML <span> tag
-  dancer.$node = $('<span class="dancer"></span>');
+//   // use jQuery to create an HTML <span> tag
+//   dancer.$node = $('<span class="dancer"></span>');
 
-  dancer.step = function() {
-    // the basic dancer doesn't do anything interesting at all on each step,
-    // it just schedules the next step
-    setTimeout(dancer.step, timeBetweenSteps);
-  };
-  dancer.step();
+//   dancer.step = function() {
+//     // the basic dancer doesn't do anything interesting at all on each step,
+//     // it just schedules the next step
+//     setTimeout(dancer.step, timeBetweenSteps);
+//   };
+//   dancer.step();
 
-  dancer.setPosition = function(top, left) {
-    // Use css top and left properties to position our <span> tag
-    // where it belongs on the page. See http://api.jquery.com/css/
-    //
-    var styleSettings = {
-      top: top,
-      left: left
-    };
-    dancer.$node.css(styleSettings);
-  };
+//   dancer.setPosition = function(top, left) {
+//     // Use css top and left properties to position our <span> tag
+//     // where it belongs on the page. See http://api.jquery.com/css/
+//     //
+//     var styleSettings = {
+//       top: top,
+//       left: left
+//     };
+//     dancer.$node.css(styleSettings);
+//   };
 
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
-  dancer.setPosition(top, left);
+//   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
+//   // this one sets the position to some random default point within the body
+//   dancer.setPosition(top, left);
 
-  return dancer;
+//   return dancer;
+// };
+
+var MakeDancer = function(top, left, timeBetweenSteps) {
+  this.timeBetweenSteps = timeBetweenSteps;
+  this.top = top;
+  this.left = left;
+  this.$node = $('<span class="dancer"></span>');
+  //invoke step and setPosition
+  this.step();
+  this.setPosition();
 };
+
+MakeDancer.prototype.step = function() {
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
+};
+
+MakeDancer.prototype.setPosition = function() {
+  var styleSettings = {
+    top: this.top,
+    left: this.left
+  };
+  this.$node.css(styleSettings);
+};
+
+
+
+
+
+
+
+
+
+
+// var MakeDancer = function(top, left, timeBetweenSteps) {
+//   this.dancer = {};
+//   this.top = top;
+//   this.left = left;
+//   this.timeBetweenSteps = timeBetweenSteps;
+//   this.dancer.counter = 0;
+//   this.dancer.$node = $('<span class="dancer"></span>');
+//   this.dancer.step = MakeDancer.prototype.step;
+//   this.dancer.setPosition = MakeDancer.prototype.setPosition;
+//   // this.dancer.step = function() {
+//   //   setTimeout(this.dancer.step, this.timeBetweenSteps);
+//   // };
+
+//   this.dancer.step(timeBetweenSteps);
+//   this.dancer.setPosition(this.top, this.left);
+//   return this.dancer;
+// };
+
+// MakeDancer.prototype.step = function(tBS) {
+//   this.counter++;
+//   if (this.counter === 3) {
+//     return;
+//   }
+//   setTimeout(this.step.bind(this), this.timeBetweenSteps);
+// };
+
+// MakeDancer.prototype.setPosition = function(top, left) {
+//   var styleSettings = {
+//     top: top,
+//     left: left
+//   };
+//   this.$node.css(styleSettings);
+// };

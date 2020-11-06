@@ -13,9 +13,6 @@ describe('dancer', function() {
   });
 
   it('should have a step function that makes its node step', function() {
-    // // sinon.spy(dancer.$node, 'toggle');
-    // dancer.step();
-    // expect(dancer.$node.toggle.called).to.be.true;
     let spy = sinon.spy();
     dancer.step();
     expect(typeof dancer.step).to.equal('function');

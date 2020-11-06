@@ -16,21 +16,25 @@ $(document).ready(function() {
      * to the stage.
      */
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-    console.log(dancerMakerFunctionName);
-
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-
-    console.log(dancerMakerFunction);
 
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(),
+      $('.dance-floor').height() * Math.random(),
+      $('.dance-floor').width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$node);
+
+    $('.dance-floor').append(dancer.$node);
   });
+
+  $('.wildcards').on('click', function(event) {
+    var wildCardFunctionName = $(this).data('wildcard-function-name');
+    let coolFunction = window[wildCardFunctionName];
+    let test = coolFunction();
+  });
+
 });
 

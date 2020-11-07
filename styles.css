@@ -10,7 +10,7 @@ body {
 }
 
 .dance-floor {
-  height: 90%;
+  height: 80%;
   position: relative;
 }
 
@@ -24,6 +24,22 @@ body, a:link, a:visited, a:active {
 .topbar {
   height: 5%;
   background-color: #555;
+  position: relative;
+}
+
+.voteforbar {
+  height: 5%;
+  position: relative;
+  border: 2px solid #778899;
+}
+
+.topbar.voteforbar:hover {
+  /* background-color: silver; */
+}
+
+.counter-bar {
+  height: 5%;
+  background-color: silver;
   position: relative;
 }
 .title {
@@ -56,4 +72,60 @@ body, a:link, a:visited, a:active {
   border-radius: 10px;
   height: 250px;
 }
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.footer-counters, .wildcards, .wildcardz {
+  margin-left: 10%;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.canidate-count {
+  margin-left: 1%;
+  font-size: 25px;
+}
+
+.kanye-count, .vKanye:hover {
+  background-color: lightgreen;
+  color: green;
+}
+
+.biden-count, .vBiden:hover {
+  background-color: skyblue;
+  color: blue;
+}
+
+.trump-count, .vTrump:hover {
+  background-color: pink;
+  color: red;
+} */
+
+
+
 

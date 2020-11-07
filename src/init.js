@@ -29,12 +29,5 @@ $(document).ready(function() {
 
     $('.dance-floor').append(dancer.$node);
   });
-
-  $('.wildcards').on('click', function(event) {
-    var wildCardFunctionName = $(this).data('wildcard-function-name');
-    let coolFunction = window[wildCardFunctionName];
-    let test = coolFunction();
-  });
-
 });
 

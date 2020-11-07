@@ -16,3 +16,7 @@ MakeKanyeDancer.prototype.step = function() {
     top: '+=50'
   }, 3000);
 };
+
+MakeKanyeDancer.prototype.lineUp = function() {
+
+};

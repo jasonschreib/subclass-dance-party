@@ -17,3 +17,7 @@ MakeTrump.prototype.step = function() {
     left: '+=50'
   }, 3000);
 };
+
+MakeTrumpDancer.prototype.lineUp = function() {
+
+};

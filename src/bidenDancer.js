@@ -20,3 +20,6 @@ MakeBidenDancer.prototype.step = function() {
 MakeBidenDancer.prototype.lineUp = function() {
   this.$node.css({'position': 'static'});
 };
+
+
+//complete line up button commit

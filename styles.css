@@ -63,6 +63,10 @@ body, a:link, a:visited, a:active {
   height: 250px;
 }
 
+.biden-dancer img:hover, .trump-dancer img:hover, .kanye-dancer img:hover {
+  height: 100px;
+}
+
 .rotate {
   animation: rotation 8s infinite linear;
 }

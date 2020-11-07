@@ -16,6 +16,7 @@ MakeTrump.prototype.step = function() {
   this.$node.animate({
     left: '+=50'
   }, 3000);
+
 };
 
 MakeTrump.prototype.lineUp = function() {

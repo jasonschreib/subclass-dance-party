@@ -18,5 +18,6 @@ MakeKanyeDancer.prototype.step = function() {
 };
 
 MakeKanyeDancer.prototype.lineUp = function() {
-
+  this.step = null;
+  this.$node.css({'position': 'static'});
 };

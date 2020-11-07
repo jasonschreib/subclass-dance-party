@@ -24,10 +24,23 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $('.dance-floor').height() * Math.random(),
       $('.dance-floor').width() * Math.random(),
-      Math.random() * 1000
+      // Math.random() * 1000
+      3000
     );
+
+    window.dancers.push(dancer);
 
     $('.dance-floor').append(dancer.$node);
   });
+
+  //handle functionality for clicking the lineUpButton
+  $('.lineUpButton').on('click', function(event) {
+    for (let i = 0; i < window.dancers.length; i++) {
+      //call lineUp on each dancer
+      window.dancers[i].lineUp();
+    }
+  });
+
+
 });
 

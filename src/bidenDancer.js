@@ -15,11 +15,8 @@ MakeBidenDancer.prototype.constructor = MakeBidenDancer;
 MakeBidenDancer.prototype.step = function() {
   MakeDancer.prototype.step.call(this);
   this.$node.addClass('rotate');
-  this.$node.animate({
-    right: '+=50'
-  }, 3000);
 };
 
 MakeBidenDancer.prototype.lineUp = function() {
-
+  this.$node.css({'position': 'static'});
 };

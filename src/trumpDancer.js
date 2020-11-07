@@ -18,6 +18,7 @@ MakeTrump.prototype.step = function() {
   }, 3000);
 };
 
-MakeTrumpDancer.prototype.lineUp = function() {
-
+MakeTrump.prototype.lineUp = function() {
+  this.step = null;
+  this.$node.css({'position': 'static'});
 };

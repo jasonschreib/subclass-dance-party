@@ -17,7 +17,7 @@ body {
 body, a:link, a:visited, a:active {
   color: lightblue;
 }
-.title, .addDancerButton {
+.title, .addDancerButton, .lineUpButton {
   padding:5px 12px;
   float:right;
 }
@@ -25,16 +25,6 @@ body, a:link, a:visited, a:active {
   height: 5%;
   background-color: #555;
   position: relative;
-}
-
-.voteforbar {
-  height: 5%;
-  position: relative;
-  border: 2px solid #778899;
-}
-
-.topbar.voteforbar:hover {
-  /* background-color: silver; */
 }
 
 .counter-bar {

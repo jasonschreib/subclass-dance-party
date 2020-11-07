@@ -10,7 +10,7 @@ body {
 }
 
 .dance-floor {
-  height: 80%;
+  height: 95%;
   position: relative;
 }
 
@@ -27,11 +27,11 @@ body, a:link, a:visited, a:active {
   position: relative;
 }
 
-.counter-bar {
+/* .counter-bar {
   height: 5%;
   background-color: silver;
   position: relative;
-}
+} */
 .title {
   background-color: #777;
 }

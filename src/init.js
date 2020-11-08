@@ -41,6 +41,12 @@ $(document).ready(function() {
     }
   });
 
+  $('.race').on('click', function(event) {
+    for (var i = 0; i < 2; i++) {
+      window.dancers[i].race();
+    }
+  });
+
 
 });
 

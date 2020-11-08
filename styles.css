@@ -67,9 +67,9 @@ body, a:link, a:visited, a:active {
   height: 100px;
 }
 
-.rotate {
+/* .rotate {
   animation: rotation 8s infinite linear;
-}
+} */
 
 @keyframes rotation {
   from {
